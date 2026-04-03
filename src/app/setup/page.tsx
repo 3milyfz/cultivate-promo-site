@@ -24,7 +24,7 @@ const onboardingSteps: OnboardingStep[] = [
   {
     title: "Choose farmer or restaurant",
     description:
-      "Select the role that matches how you will use Cultivate. Farmers list surplus and connect with buyers; restaurants and food startups discover local supply and start conversations.",
+      "Select the role that matches how you will use Cultivate. Farmers list produce and connect with buyers; restaurants and food startups discover local supply and start conversations.",
     imageCaption: "Replace with screenshot: role selection (farmer vs restaurant)",
   },
   {
@@ -102,8 +102,8 @@ export default function GetStartedPage() {
         <p className="font-semibold text-[#315f34]">Developer setup</p>
         <p className="mt-2 text-xs leading-relaxed">
           If you need to run Cultivate locally or contribute code, use the{" "}
-          <a href="/docs" className="font-medium text-[#00674F] underline-offset-2 hover:underline">
-            documentation
+          <a href="/wiki" className="font-medium text-[#00674F] underline-offset-2 hover:underline">
+            wiki
           </a>{" "}
           and repository README instead of this page.
         </p>

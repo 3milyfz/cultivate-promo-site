@@ -7,7 +7,7 @@ export default function ContributingPage() {
         </h1>
         <p className="max-w-2xl text-sm text-zinc-700">
           Explain how external users can file bug reports, propose ideas, and
-          contribute code or documentation to Cultivate.
+          contribute code or wiki content to Cultivate.
         </p>
       </header>
 

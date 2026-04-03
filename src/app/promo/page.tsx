@@ -51,7 +51,7 @@ export default function PromoPage() {
           <p className="max-w-xl text-xs text-zinc-500">
             Use this page if you are evaluating the beta, capturing screenshots
             for a review, or just want to see an end‑to‑end flow before diving
-            into the full docs.
+            into the full wiki.
           </p>
         </div>
         <div className="hidden md:flex items-center gap-3 rounded-xl border border-zinc-200 bg-white/80 px-4 py-3 text-xs shadow-sm">
@@ -77,7 +77,7 @@ export default function PromoPage() {
             walkthroughs below to go from zero to completing the primary
             Cultivate workflow{" "}
             <span className="font-semibold text-zinc-900">
-              without reading additional docs.
+              without reading additional wiki pages.
             </span>
           </p>
         </div>

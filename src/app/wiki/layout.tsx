@@ -1,13 +1,13 @@
 import Link from "next/link";
 
-const docsNav = [
-  { href: "/docs", label: "Getting Started" },
-  { href: "/docs/features", label: "Features" },
-  { href: "/docs/troubleshooting", label: "Troubleshooting & FAQ" },
-  { href: "/docs/api-or-deployment", label: "API / Deployment" },
+const wikiNav = [
+  { href: "/wiki", label: "Getting Started" },
+  { href: "/wiki/features", label: "Features" },
+  { href: "/wiki/troubleshooting", label: "Troubleshooting & FAQ" },
+  { href: "/wiki/api-or-deployment", label: "API / Deployment" },
 ];
 
-export default function DocsLayout({
+export default function WikiLayout({
   children,
 }: {
   children: React.ReactNode;
@@ -17,14 +17,14 @@ export default function DocsLayout({
       <aside className="space-y-4 rounded-lg border border-zinc-200 bg-white/80 p-4 text-sm">
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500">
-            Docs / Wiki
+            Wiki
           </p>
           <p className="mt-1 text-xs text-zinc-600">
-            Navigate all public documentation content from here.
+            Navigate all public wiki articles from here.
           </p>
         </div>
         <nav className="space-y-1 text-xs">
-          {docsNav.map((item) => (
+          {wikiNav.map((item) => (
             <Link
               key={item.href}
               href={item.href}
@@ -48,4 +48,3 @@ export default function DocsLayout({
     </div>
   );
 }
-

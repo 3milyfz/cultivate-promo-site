@@ -1,4 +1,4 @@
-export default function DocsGettingStartedPage() {
+export default function WikiGettingStartedPage() {
   return (
     <article className="prose max-w-none prose-headings:text-zinc-900 prose-p:text-zinc-700 prose-code:text-[#00674F]">
       <h1>Getting Started</h1>

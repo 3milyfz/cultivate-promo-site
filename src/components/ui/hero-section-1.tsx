@@ -170,7 +170,7 @@ export function HeroSection() {
                 For evaluators &amp; instructors
               </p>
               <p className="mt-1">
-                Use the beta site and docs as a complete artifact: live app,
+                Use the beta site and wiki as a complete artifact: live app,
                 workflows, architecture, and contribution history.
               </p>
             </div>

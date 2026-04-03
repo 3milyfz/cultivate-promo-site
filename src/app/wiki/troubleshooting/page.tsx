@@ -1,4 +1,4 @@
-export default function DocsTroubleshootingPage() {
+export default function WikiTroubleshootingPage() {
   return (
     <article className="prose max-w-none prose-headings:text-zinc-900 prose-p:text-zinc-700">
       <h1>Troubleshooting &amp; FAQ</h1>

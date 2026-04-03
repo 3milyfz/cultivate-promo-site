@@ -1,4 +1,4 @@
-export default function DocsFeaturesPage() {
+export default function WikiFeaturesPage() {
   return (
     <article className="prose max-w-none prose-headings:text-zinc-900 prose-p:text-zinc-700">
       <h1>Features</h1>

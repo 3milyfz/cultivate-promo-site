@@ -1,4 +1,4 @@
-export default function DocsApiOrDeploymentPage() {
+export default function WikiApiOrDeploymentPage() {
   return (
     <article className="prose max-w-none prose-headings:text-zinc-900 prose-p:text-zinc-700">
       <h1>API / Deployment</h1>

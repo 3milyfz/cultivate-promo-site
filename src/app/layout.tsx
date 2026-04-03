@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Cultivate Beta | Overview & Docs",
+  title: "Cultivate Beta | Overview & Wiki",
   description:
     "Single external entry point for Cultivate beta testers, contributors, and evaluators.",
 };
@@ -71,8 +71,8 @@ function SiteHeader() {
           <a href="/workflow-architecture" className="hover:text-zinc-900">
             Workflow &amp; Architecture
           </a>
-          <a href="/docs" className="hover:text-zinc-900">
-            Docs
+          <a href="/wiki" className="hover:text-zinc-900">
+            Wiki
           </a>
           <a href="/contributing" className="hover:text-zinc-900">
             Contribute
@@ -106,8 +106,8 @@ function SiteFooter() {
           >
             GitHub Repository
           </a>
-          <a href="/docs" className="hover:text-zinc-900">
-            Documentation Root
+          <a href="/wiki" className="hover:text-zinc-900">
+            Wiki Home
           </a>
           <a
             href="https://github.com/csc454-team-main-catzo/Cultivate/issues"
