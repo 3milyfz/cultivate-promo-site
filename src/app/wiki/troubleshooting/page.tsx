@@ -53,7 +53,7 @@ export default function WikiTroubleshootingPage() {
               <a href="/wiki/features" className="text-[#00674F] hover:underline">
                 Features
               </a>{" "}
-              page—tabs separate farmer-focused and restaurant-focused
+              page. Tabs separate farmer-focused and restaurant-focused
               capabilities.
             </p>
           </WikiFaqItem>

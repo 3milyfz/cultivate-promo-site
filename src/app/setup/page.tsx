@@ -61,7 +61,7 @@ export default function GetStartedPage() {
           How to use Cultivate
         </h1>
         <p className="max-w-2xl text-sm text-zinc-700">
-          These steps walk you through opening the live beta app—not installing
+          These steps walk you through opening the live beta app, not installing
           the codebase. Complete them once to start listing produce or sourcing
           locally as a buyer.
         </p>

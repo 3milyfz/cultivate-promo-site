@@ -27,7 +27,7 @@ const farmerFeatures: FeatureBlock[] = [
     body: (
       <p>
         When a restaurant publishes a demand listing, you can respond with an
-        offer that fits volume, timing, and product specs—keeping the
+        offer that fits volume, timing, and product specs, keeping the
         conversation in one place instead of scattered emails or texts.
       </p>
     ),
@@ -93,7 +93,7 @@ const restaurantFeatures: FeatureBlock[] = [
     body: (
       <p>
         Centralized threads and listing history help your kitchen or
-        procurement staff see what was agreed and with whom—useful for audits
+        procurement staff see what was agreed and with whom, useful for audits
         and repeat orders.
       </p>
     ),

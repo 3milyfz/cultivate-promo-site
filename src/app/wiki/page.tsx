@@ -15,7 +15,7 @@ export default function WikiGettingStartedPage() {
           Getting started
         </h1>
         <p className="text-lg leading-relaxed text-zinc-600">
-          Welcome to the Cultivate wiki—structured like a product docs hub, with
+          Welcome to the Cultivate wiki, structured like a product docs hub, with
           expandable topics and answers so you can skim or go deep.
         </p>
         <div className="flex flex-wrap gap-3 pt-2">
@@ -37,7 +37,7 @@ export default function WikiGettingStartedPage() {
       <section className="space-y-4">
         <h2 className="text-lg font-semibold text-zinc-900">Discover</h2>
         <p className="text-sm text-zinc-600">
-          Expand a card to read more—similar to topic tiles on cloud
+          Expand a card to read more, similar to topic tiles on cloud
           documentation home pages.
         </p>
         <div className="space-y-3">
@@ -79,7 +79,7 @@ export default function WikiGettingStartedPage() {
               <li>Log in and open the listings area.</li>
               <li>
                 As a farmer, create a supply listing; as a restaurant, create or
-                browse demand—then connect through a response or message.
+                browse demand, then connect through a response or message.
               </li>
               <li>
                 Confirm you can open a thread and view listing details without
@@ -99,8 +99,8 @@ export default function WikiGettingStartedPage() {
                   className="text-[#00674F] hover:underline"
                 >
                   Features
-                </Link>{" "}
-                — farmer vs restaurant tabs with expandable capability cards.
+                </Link>
+                : farmer vs restaurant tabs with expandable capability cards.
               </li>
               <li>
                 <Link
@@ -108,8 +108,8 @@ export default function WikiGettingStartedPage() {
                   className="text-[#00674F] hover:underline"
                 >
                   Troubleshooting &amp; FAQ
-                </Link>{" "}
-                — common errors and questions.
+                </Link>
+                : common errors and questions.
               </li>
             </ul>
           </WikiExpandableCard>
@@ -121,13 +121,13 @@ export default function WikiGettingStartedPage() {
           Questions
         </h2>
         <p className="text-sm text-zinc-600">
-          Quick answers—click a question to expand.
+          Quick answers: click a question to expand.
         </p>
         <div className="rounded-xl border border-zinc-200 bg-white px-4 shadow-sm">
           <WikiFaqItem question="What is Cultivate?">
             <p>
               Cultivate connects farmers and restaurants so sourcing and
-              selling local product happens in one place—listings, responses, and
+              selling local product happens in one place: listings, responses, and
               messaging instead of fragmented channels.
             </p>
           </WikiFaqItem>
