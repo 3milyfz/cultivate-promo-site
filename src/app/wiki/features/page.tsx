@@ -1,22 +1,23 @@
+import { WikiFeatureTabs } from "@/components/wiki/wiki-feature-tabs";
+
 export default function WikiFeaturesPage() {
   return (
-    <article className="prose max-w-none prose-headings:text-zinc-900 prose-p:text-zinc-700">
-      <h1>Features</h1>
-      <p>
-        TODO: High-level feature overview, grouped by themes important to
-        evaluators.
-      </p>
-      <h2>Feature group A</h2>
-      <ul>
-        <li>TODO: Feature A1 description.</li>
-        <li>TODO: Feature A2 description.</li>
-      </ul>
-      <h2>Feature group B</h2>
-      <ul>
-        <li>TODO: Feature B1 description.</li>
-        <li>TODO: Feature B2 description.</li>
-      </ul>
-    </article>
+    <div className="max-w-3xl space-y-8">
+      <header className="space-y-3 border-b border-zinc-200 pb-8">
+        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500">
+          Documentation
+        </p>
+        <h1 className="text-3xl font-semibold tracking-tight text-zinc-900">
+          Features
+        </h1>
+        <p className="text-base leading-relaxed text-zinc-600">
+          Explore what Cultivate offers for each side of the marketplace. Use
+          the tabs to switch between farmer-focused and restaurant-focused
+          capabilities, each section expands for more detail.
+        </p>
+      </header>
+
+      <WikiFeatureTabs />
+    </div>
   );
 }
-
