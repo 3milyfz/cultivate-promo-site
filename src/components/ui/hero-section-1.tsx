@@ -7,6 +7,7 @@ import { ArrowRight, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const LIVE_APP_URL = "https://cultivate-fe.vercel.app/";
+const PROMO_VIDEO_URL = "[PROMO_VIDEO_URL]";
 
 export function HeroSection() {
   return (
@@ -57,7 +58,7 @@ export function HeroSection() {
               </a>
 
               <h1 className="mx-auto mt-8 max-w-4xl text-balance text-4xl font-semibold tracking-tight sm:text-5xl md:text-6xl lg:mt-16 xl:text-[3.6rem]">
-                Connecting Ontario&apos;s local farms to modern kitchens.
+                Connecting local farms to modern kitchens.
               </h1>
               <p className="mx-auto mt-6 max-w-2xl text-balance text-sm text-zinc-700 sm:text-base">
                 Cultivate is a chat-first B2B platform that connects
@@ -75,7 +76,7 @@ export function HeroSection() {
                   >
                     <a href={LIVE_APP_URL} rel="noopener noreferrer">
                       <span className="text-nowrap">
-                        Open live Cultivate app
+                        Open Cultivate App
                       </span>
                     </a>
                   </Button>
@@ -87,24 +88,50 @@ export function HeroSection() {
                   className="h-10 rounded-xl px-5 text-base"
                 >
                   <Link href="/promo#demo-tutorial">
-                    <span className="text-nowrap">Watch tutorials</span>
+                    <span className="text-nowrap">Watch Demo</span>
                   </Link>
                 </Button>
               </div>
             </div>
           </div>
 
-          <div className="relative mt-8 overflow-hidden px-2 sm:mt-12 md:mt-20">
-            <div
-              aria-hidden
-              className="absolute inset-0 z-10 bg-gradient-to-b from-transparent from-35% to-[color:var(--color-earth-50)]"
-            />
+          <div className="relative mt-8 px-2 sm:mt-12 md:mt-20">
             <div className="relative mx-auto max-w-5xl overflow-hidden rounded-2xl border border-zinc-200 bg-white p-3 shadow-lg">
-              <img
-                className="relative aspect-[15/8] w-full rounded-xl object-cover"
-                src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1600&q=80"
-                alt="Cultivate dashboard concept with listings and chat"
-              />
+              <div
+                className="relative flex aspect-video w-full flex-col items-center justify-center gap-3 rounded-xl border border-dashed border-[#E0F2EB] bg-[#E0F2EB]/50 px-6 py-10 text-center sm:py-14"
+                role="region"
+                aria-label="Promo video placeholder"
+              >
+                <div className="flex h-14 w-14 items-center justify-center rounded-full border border-[#00674F]/25 bg-white text-[#00674F] shadow-sm">
+                  <svg
+                    viewBox="0 0 24 24"
+                    className="ml-0.5 h-7 w-7"
+                    fill="currentColor"
+                    aria-hidden
+                  >
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
+                <div className="space-y-1">
+                  <p className="text-sm font-semibold text-zinc-900">
+                    Promo video
+                  </p>
+                  <p className="max-w-md text-xs text-zinc-600">
+                    Drop in an embedded player or link out once your tour is
+                    hosted. Replace{" "}
+                    <code className="rounded bg-white/80 px-1 py-0.5 text-[10px] text-zinc-800">
+                      {PROMO_VIDEO_URL}
+                    </code>{" "}
+                    in the source with your real URL.
+                  </p>
+                </div>
+                <a
+                  href={PROMO_VIDEO_URL}
+                  className="inline-flex items-center justify-center rounded-full bg-[#00674F] px-5 py-2 text-xs font-semibold text-white shadow-sm transition-colors hover:bg-[#00543f] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00A27A]/70"
+                >
+                  Watch 2-minute product tour
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -121,7 +148,7 @@ export function HeroSection() {
               <ChevronRight className="ml-1 inline-block h-3 w-3" />
             </Link>
           </div>
-          <div className="group-hover:blur-[1px] group-hover:opacity-60 mx-auto mt-8 grid max-w-2xl grid-cols-2 gap-x-12 gap-y-6 text-xs text-zinc-600 transition-all duration-500 sm:grid-cols-3 sm:gap-x-16 sm:gap-y-10">
+          <div className="mx-auto mt-8 grid max-w-2xl grid-cols-2 gap-x-12 gap-y-6 text-xs text-zinc-600 transition-opacity duration-500 group-hover:opacity-60 sm:grid-cols-3 sm:gap-x-16 sm:gap-y-10">
             <div>
               <p className="font-semibold text-zinc-900">For farmers</p>
               <p className="mt-1">

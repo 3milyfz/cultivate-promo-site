@@ -65,17 +65,11 @@ function SiteHeader() {
           <a href="/" className="hover:text-zinc-900">
             Overview
           </a>
-          <a href="/promo" className="hover:text-zinc-900">
-            Promo Video
-          </a>
           <a href="/promo#demo-tutorial" className="hover:text-zinc-900">
-            Tutorial
+            Demo
           </a>
           <a href="/workflow-architecture" className="hover:text-zinc-900">
-            Workflows
-          </a>
-          <a href="/workflow-architecture#architecture" className="hover:text-zinc-900">
-            Architecture
+            Workflow &amp; Architecture
           </a>
           <a href="/docs" className="hover:text-zinc-900">
             Docs
