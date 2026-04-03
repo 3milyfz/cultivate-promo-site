@@ -62,7 +62,7 @@ export function HeroSection() {
               </h1>
               <p className="mx-auto mt-6 max-w-2xl text-balance text-sm text-zinc-700 sm:text-base">
                 Cultivate is a chat-first B2B platform that connects
-                Ontario&apos;s self-sufficient farmers with restaurants and food
+                Ontario&apos;s farmers with restaurants and food
                 startups. Glean, our AI assistant, turns harvests into listings
                 and helps buyers source local produce in natural language.
               </p>

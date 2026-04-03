@@ -41,29 +41,10 @@ export default function PromoPage() {
             Cultivate beta overview
           </h1>
           <p className="max-w-2xl text-sm text-zinc-700">
-            Cultivate connects farmers with restaurants through{" "}
-            <span className="font-semibold">Glean</span>, an AI assistant that
-            turns harvests into listings and helps buyers source nearby produce
-            in natural language. It is designed for small and mid‑sized farms
-            and restaurant teams who want local, transparent supply without the
-            overhead of traditional marketplaces.
-          </p>
-          <p className="max-w-xl text-xs text-zinc-500">
             Use this page if you are evaluating the beta, capturing screenshots
             for a review, or just want to see an end‑to‑end flow before diving
             into the full wiki.
           </p>
-        </div>
-        <div className="hidden md:flex items-center gap-3 rounded-xl border border-zinc-200 bg-white/80 px-4 py-3 text-xs shadow-sm">
-          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#00674F] text-white text-xs font-semibold">
-            C
-          </div>
-          <div>
-            <p className="font-semibold text-zinc-900">Cultivate · Beta</p>
-            <p className="text-[11px] text-zinc-600">
-              Connect farmers with restaurants. Source local, eat local.
-            </p>
-          </div>
         </div>
       </section>
 
