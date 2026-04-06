@@ -87,7 +87,7 @@ export function HeroSection() {
                   variant="outline"
                   className="h-10 rounded-xl px-5 text-base"
                 >
-                  <Link href="/promo#demo-tutorial">
+                  <Link href="/demo">
                     <span className="text-nowrap">Watch Demo</span>
                   </Link>
                 </Button>

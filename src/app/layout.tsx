@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} relative h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-[color:var(--color-earth-50)] text-zinc-900">
         <div className="flex min-h-screen flex-col">
@@ -65,7 +65,7 @@ function SiteHeader() {
           <a href="/" className="hover:text-zinc-900">
             Overview
           </a>
-          <a href="/promo#demo-tutorial" className="hover:text-zinc-900">
+          <a href="/demo" className="hover:text-zinc-900">
             Demo
           </a>
           <a href="/workflow-architecture" className="hover:text-zinc-900">

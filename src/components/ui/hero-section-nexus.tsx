@@ -717,7 +717,7 @@ const InteractiveHero: React.FC = () => {
             Watch 2-minute promo
           </motion.a>
           <a
-            href="/promo#demo-tutorial"
+            href="/demo"
             className="w-full rounded-md border border-zinc-200 bg-white/60 px-5 py-2.5 text-sm font-semibold text-zinc-800 transition-colors hover:border-[#00674F]/60 hover:text-[#00674F] sm:w-auto"
           >
             Jump to tutorials
