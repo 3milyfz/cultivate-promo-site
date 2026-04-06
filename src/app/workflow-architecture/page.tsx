@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function WorkflowArchitecturePage() {
   return (
     <div className="space-y-10">
@@ -56,46 +58,103 @@ export default function WorkflowArchitecturePage() {
         </h2>
         <div className="grid gap-4 lg:grid-cols-[1.7fr,1.3fr] lg:items-start">
           <div className="space-y-3">
-            <div className="flex h-64 items-center justify-center rounded-xl border border-dashed border-[#E0F2EB] bg-[#E0F2EB]/40 text-xs text-zinc-700">
-              ARCHITECTURE DIAGRAM IMAGE PLACEHOLDER
+            <div className="mx-auto max-w-xl overflow-hidden rounded-xl border border-zinc-200 bg-white shadow-sm md:max-w-2xl">
+              <Image
+                src="/architecture_diagram.png"
+                alt="System architecture: React frontend and TypeScript SDK calling Hono API with Auth0 JWT, MongoDB and GridFS, Azure Vision, Groq LLM, and AAFC Infohort pricing"
+                width={1594}
+                height={832}
+                className="h-auto w-full object-contain object-top"
+                sizes="(max-width: 768px) min(100vw,36rem), min(42rem, 50vw)"
+                priority
+              />
             </div>
-            <p className="text-xs text-zinc-700">
-              TODO: Add caption and alt text describing the architecture
-              diagram, major components, and important data flows.
+            <p className="text-xs leading-relaxed text-zinc-700">
+              Beta preserves the alpha system topology: a React frontend calls a
+              Hono API server through a typed TypeScript SDK, with Auth0 JWT
+              middleware protecting sensitive routes. The backend orchestrates
+              MongoDB/GridFS storage, Azure Vision for image tagging, Groq for
+              LLM inference, and AAFC Infohort for pricing data.
             </p>
           </div>
           <div className="space-y-4 text-xs">
             <div className="rounded-lg border border-zinc-200 bg-white/90 p-3 shadow-sm">
               <h3 className="text-sm font-semibold text-zinc-900">
-                Major components &amp; data flows
+                Major components
               </h3>
-              <ul className="mt-2 list-disc space-y-1 pl-4 text-zinc-700">
-                <li>TODO: Component A and its responsibilities.</li>
-                <li>TODO: Component B and how it interacts with A.</li>
-                <li>TODO: External dependency X and data it handles.</li>
+              <ul className="mt-2 list-disc space-y-2 pl-4 text-zinc-700">
+                <li>
+                  <span className="font-medium text-zinc-900">
+                    React frontend:
+                  </span>{" "}
+                  user-facing web client
+                </li>
+                <li>
+                  <span className="font-medium text-zinc-900">
+                    TypeScript SDK:
+                  </span>{" "}
+                  typed API client generated from OpenAPI spec
+                </li>
+                <li>
+                  <span className="font-medium text-zinc-900">
+                    Hono API server:
+                  </span>{" "}
+                  request handling, orchestration, and integration layer
+                </li>
+                <li>
+                  <span className="font-medium text-zinc-900">
+                    Auth0 JWT middleware:
+                  </span>{" "}
+                  authentication and route protection
+                </li>
+                <li>
+                  <span className="font-medium text-zinc-900">MongoDB:</span>{" "}
+                  application and listing metadata
+                </li>
+                <li>
+                  <span className="font-medium text-zinc-900">GridFS:</span>{" "}
+                  uploaded image storage
+                </li>
+                <li>
+                  <span className="font-medium text-zinc-900">
+                    Azure Vision:
+                  </span>{" "}
+                  image tagging for listing generation
+                </li>
+                <li>
+                  <span className="font-medium text-zinc-900">
+                    Groq / LLM inference:
+                  </span>{" "}
+                  structured draft generation and retrieval-based matching
+                </li>
+                <li>
+                  <span className="font-medium text-zinc-900">
+                    AAFC Infohort:
+                  </span>{" "}
+                  external pricing dependency for daily market data
+                </li>
               </ul>
             </div>
             <div className="rounded-lg border border-zinc-200 bg-white/90 p-3 shadow-sm">
               <h3 className="text-sm font-semibold text-zinc-900">
                 Architecture rationale
               </h3>
-              <p className="mt-1 text-zinc-700">
-                TODO: Describe why this architecture is appropriate for the
-                beta, including trade-offs and constraints.
+              <p className="mt-1 leading-relaxed text-zinc-700">
+                The beta topology is materially unchanged from alpha. The main
+                beta update is about hardening of the existing architecture for
+                external use: authenticated sensitive routes, stricter input
+                validation on critical API paths, explicit upload failure
+                handling, structured upload logs, and a health endpoint. In
+                other words, beta extends the alpha architecture operationally
+                rather than structurally.
               </p>
-              <div className="mt-2 rounded-md border border-zinc-200 bg-[color:var(--color-earth-50)] p-2">
+              <div className="mt-3 rounded-md border border-zinc-200 bg-[color:var(--color-earth-50)] p-2">
                 <p className="text-[11px] font-semibold text-zinc-900">
                   Changes since alpha
                 </p>
-                <ul className="mt-1 list-disc space-y-1 pl-4 text-[11px] text-zinc-600">
-                  <li>
-                    TODO: Either list specific changes here or state{" "}
-                    <span className="font-semibold text-zinc-800">
-                      “No changes since alpha”
-                    </span>
-                    .
-                  </li>
-                </ul>
+                <p className="mt-1 text-[11px] text-zinc-700">
+                  No changes since alpha
+                </p>
               </div>
             </div>
           </div>
@@ -104,4 +163,3 @@ export default function WorkflowArchitecturePage() {
     </div>
   );
 }
-
