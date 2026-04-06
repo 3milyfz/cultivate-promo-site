@@ -52,9 +52,9 @@ const steps = [
     title: "Farmer premium: dynamic pricing",
     instruction:
       "With premium enabled, pricing can adjust from live signals—keep offers competitive while you focus on the harvest.",
-    videoUrl: "/dp.mov",
+    videoUrl: "/dp_new.mov",
     imageSrc:
-      "/dp.png",
+      "/dp_new_example.png",
     imageAlt: "Showing dynamic pricing in action",
   },
   {
@@ -136,13 +136,14 @@ function SoundOnMark() {
 
 export function PromoTutorialScroll() {
   return (
-    <div className="flex flex-col overflow-hidden pb-24 pt-8 md:pb-32 md:pt-12">
+    <div className="flex flex-col overflow-hidden pb-24 pt-0 md:pb-32">
       {steps.map((step, index) => {
         const Icon = step.icon;
         const stepLabel = `${index + 1}. ${step.title}`;
         return (
           <ContainerScroll
             key={step.id}
+            alignFirstStep={index === 0}
             titleComponent={
               <div className="space-y-4 px-2 pb-0 md:pb-1">
                 <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl border border-zinc-200 bg-white text-[#00674F] shadow-sm dark:border-zinc-700 dark:bg-zinc-800 dark:text-[#00A27A]">

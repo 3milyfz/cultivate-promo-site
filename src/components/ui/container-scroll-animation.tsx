@@ -8,14 +8,22 @@ import {
   type MotionValue,
 } from "framer-motion";
 
+import { cn } from "@/lib/utils";
+
+/** Scroll progress 0→1 is mapped over this fraction of the section so motion completes earlier. */
+const SCROLL_PROGRESS_BAND = 0.2;
+
 export const ContainerScroll = ({
   titleComponent,
   children,
   className,
+  alignFirstStep = false,
 }: {
   titleComponent: string | React.ReactNode;
   children: React.ReactNode;
   className?: string;
+  /** Pull step 1 to the top of the scroll section so there’s no empty band above it. */
+  alignFirstStep?: boolean;
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -38,20 +46,45 @@ export const ContainerScroll = ({
     return isMobile ? [0.7, 0.9] : [1.05, 1];
   };
 
-  const rotate = useTransform(scrollYProgress, [0, 1], [14, 0]);
-  const scale = useTransform(scrollYProgress, [0, 1], scaleDimensions());
-  const translate = useTransform(scrollYProgress, [0, 1], [0, -56]);
+  const rotate = useTransform(
+    scrollYProgress,
+    [0, SCROLL_PROGRESS_BAND],
+    [14, 0],
+    { clamp: true },
+  );
+  const scale = useTransform(
+    scrollYProgress,
+    [0, SCROLL_PROGRESS_BAND],
+    scaleDimensions(),
+    { clamp: true },
+  );
+  const translate = useTransform(
+    scrollYProgress,
+    [0, SCROLL_PROGRESS_BAND],
+    [0, -56],
+    { clamp: true },
+  );
 
   return (
     <div
       className={
         className ??
-        "relative flex h-[56rem] items-center justify-center p-2 md:h-[76rem] md:p-16"
+        cn(
+          "relative flex h-[56rem] justify-center p-2 md:h-[76rem] md:p-16",
+          alignFirstStep
+            ? "items-start pt-0 md:pt-1"
+            : "items-center",
+        )
       }
       ref={containerRef}
     >
       <div
-        className="relative isolate w-full py-8 md:py-24"
+        className={cn(
+          "relative isolate w-full",
+          alignFirstStep
+            ? "pt-0 pb-8 md:pt-1 md:pb-24"
+            : "py-8 md:py-24",
+        )}
         style={{
           perspective: "1000px",
         }}
