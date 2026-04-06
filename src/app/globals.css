@@ -54,4 +54,33 @@
   .animate-shine {
     animation: shine 5s linear infinite;
   }
+
+  /* SectionWithMockup — CSS only so returning via <Link> never leaves content invisible. */
+  @keyframes section-mockup-rise {
+    from {
+      opacity: 0;
+      transform: translateY(14px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .section-mockup-text-col {
+    animation: section-mockup-rise 0.48s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .section-mockup-media-col {
+    animation: section-mockup-rise 0.5s cubic-bezier(0.22, 1, 0.36, 1) 0.09s both;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .section-mockup-text-col,
+    .section-mockup-media-col {
+      animation: none;
+      opacity: 1;
+      transform: none;
+    }
+  }
 }

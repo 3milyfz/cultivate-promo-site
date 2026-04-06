@@ -4,27 +4,29 @@ import { cn } from "@/lib/utils";
 
 export interface SectionWithMockupProps {
   title: string | React.ReactNode;
-  description: string | React.ReactNode;
-  /** Right column: instructions, links, and contribution actions (replaces image mockups). */
+  description?: string | React.ReactNode;
+  leftAside?: React.ReactNode;
   children: React.ReactNode;
   reverseLayout?: boolean;
   className?: string;
 }
 
 /**
- * Static hero/layout for contributing — no Framer Motion here. Motion + App Router
- * client navigation was leaving content at opacity:0 until full reload.
+ * Hero layout with CSS enter animation only — no Framer Motion. FM + App Router
+ * client navigations were leaving columns stuck at opacity:0 after returning
+ * via in-app links.
  */
 export function SectionWithMockup({
   title,
   description,
+  leftAside,
   children,
   reverseLayout = false,
   className,
 }: SectionWithMockupProps) {
   const layoutClasses = reverseLayout
-    ? "md:grid-cols-2 md:grid-flow-col-dense"
-    : "md:grid-cols-2";
+    ? "md:grid-cols-[minmax(0,1fr)_minmax(0,16.5rem)] md:grid-flow-col-dense"
+    : "md:grid-cols-[minmax(0,16.5rem)_minmax(0,1fr)]";
 
   const textOrderClass = reverseLayout ? "md:col-start-2" : "";
   const sideOrderClass = reverseLayout ? "md:col-start-1 md:row-start-1" : "";
@@ -38,25 +40,32 @@ export function SectionWithMockup({
     >
       <div
         className={cn(
-          "grid w-full grid-cols-1 items-start gap-10 md:gap-12 lg:gap-16",
+          "grid w-full grid-cols-1 items-start gap-8 md:gap-8 lg:gap-10",
           layoutClasses,
         )}
       >
         <div
           className={cn(
-            "flex max-w-xl flex-col gap-4",
+            "section-mockup-text-col flex min-w-0 max-w-full flex-col gap-6",
             textOrderClass,
           )}
         >
-          <h2 className="text-2xl font-semibold leading-tight tracking-tight text-zinc-900 md:text-3xl">
-            {title}
-          </h2>
-          <div className="text-sm leading-relaxed text-zinc-700 md:text-[15px]">
-            {description}
+          <div className="flex flex-col gap-4">
+            <h2 className="text-2xl font-semibold leading-tight tracking-tight text-zinc-900 md:text-3xl">
+              {title}
+            </h2>
+            {description ? (
+              <div className="text-sm leading-relaxed text-zinc-700 md:text-[15px]">
+                {description}
+              </div>
+            ) : null}
           </div>
+          {leftAside ? <div className="min-w-0">{leftAside}</div> : null}
         </div>
 
-        <div className={cn("min-w-0", sideOrderClass)}>{children}</div>
+        <div className={cn("section-mockup-media-col min-w-0", sideOrderClass)}>
+          {children}
+        </div>
       </div>
     </section>
   );
