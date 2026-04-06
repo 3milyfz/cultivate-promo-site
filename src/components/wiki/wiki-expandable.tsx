@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 
 type ExpandableCardProps = {
@@ -15,10 +16,13 @@ export function WikiExpandableCard({
   children,
   defaultOpen = false,
 }: ExpandableCardProps) {
+  const [open, setOpen] = useState(defaultOpen);
+
   return (
     <details
       className="group rounded-xl border border-zinc-200 bg-white shadow-sm transition-shadow hover:shadow-md open:shadow-md"
-      defaultOpen={defaultOpen}
+      open={open}
+      onToggle={(e) => setOpen(e.currentTarget.open)}
     >
       <summary className="flex cursor-pointer list-none items-start justify-between gap-3 rounded-xl px-4 py-3.5 text-left [&::-webkit-details-marker]:hidden">
         <span className="min-w-0 flex-1">
