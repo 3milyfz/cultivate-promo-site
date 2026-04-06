@@ -40,7 +40,7 @@ const steps = [
     icon: Mic,
     title: "Farmer: voice to text input",
     instruction:
-      "Dictate listing details hands-free; speech is transcribed into the form so you can refine and post without typing everything.",
+      "Dictate listing details hands-free; speech is transcribed into the form so you can post without typing everything.",
     videoUrl: "/speech_to_text.mov",
     imageSrc:
       "https://images.unsplash.com/photo-1590602847861-f357a9332aaf?auto=format&fit=crop&w=1600&q=80",

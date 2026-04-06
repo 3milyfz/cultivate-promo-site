@@ -10,7 +10,7 @@ export default function DemoPage() {
             Cultivate beta demo & tutorial
           </h1>
           <p className="max-w-2xl text-sm text-zinc-700">
-            Scroll through each step.
+          Demonstrate the main end-to-end workflows supported in the Cultivate beta release. Scroll through each step to see how farmer-side listing creation and restaurant-side sourcing are completed in the current product.
           </p>
         </div>
         </div>
