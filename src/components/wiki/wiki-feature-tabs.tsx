@@ -56,45 +56,99 @@ const farmerFeatures: FeatureBlock[] = [
 
 const restaurantFeatures: FeatureBlock[] = [
   {
-    title: "Demand listings & sourcing",
-    subtitle: "Post what you need and collect farmer responses.",
+    title: "Demand upload",
+    subtitle: "Upload a CSV file containing your produce requirements.",
     body: (
-      <ul className="mt-2 list-disc space-y-1.5 pl-4 text-zinc-700">
-        <li>Publish demand for ingredients, quantities, and delivery windows.</li>
-        <li>Compare farmer offers in context with the original request.</li>
-        <li>Reduce back-and-forth by keeping sourcing on-platform.</li>
-      </ul>
+      <p>
+        Start the restaurant workflow by uploading a structured demand file. The
+        system accepts CSV input and uses it as the primary entry point for
+        procurement, removing the need to manually create demand item-by-item
+        inside the platform.
+      </p>
+    ),
+  },
+  {
+    title: "Demand extraction",
+    subtitle: "Parse uploaded demand into structured sourcing fields.",
+    body: (
+      <p>
+        After file upload, Cultivate extracts procurement-relevant fields from the
+        CSV, such as produce name, requested quantity, and other order
+        constraints where available. This structured output becomes the input
+        for downstream matching and optimization.
+      </p>
+    ),
+  },
+  {
+    title: "Optimization shopping",
+    subtitle: "Generate sourcing recommendations from uploaded demand.",
+    body: (
+      <p>
+        Once demand is extracted, the platform compares the restaurant&apos;s
+        requested items against available farmer listings in the database. The
+        optimization layer evaluates both listing relevance and price-related
+        factors to produce recommendation outputs that reduce manual search and
+        comparison work.
+      </p>
+    ),
+  },
+  {
+    title: "Lowest cost plan",
+    subtitle: "Return the sourcing plan with the lowest total purchase cost.",
+    body: (
+      <p>
+        This output prioritizes price efficiency across matched listings. Use
+        this mode when the primary procurement objective is minimizing spend
+        while still covering as much of the requested demand as possible.
+      </p>
+    ),
+  },
+  {
+    title: "Best match plan",
+    subtitle:
+      "Return the sourcing plan with the strongest listing-to-demand alignment.",
+    body: (
+      <p>
+        This output prioritizes semantic and attribute-level fit between the
+        uploaded demand and the produce listings available in the system. Use
+        this mode when closeness to the requested product characteristics matters
+        more than lowest price.
+      </p>
+    ),
+  },
+  {
+    title: "Balanced plan",
+    subtitle: "Return a sourcing plan that balances cost and match quality.",
+    body: (
+      <p>
+        This output combines both price and listing relevance into a
+        middle-ground recommendation. Use this mode when neither pure cost
+        minimization nor pure match quality should dominate the result.
+      </p>
+    ),
+  },
+  {
+    title: "Cart review",
+    subtitle: "Review and validate the recommended order before checkout.",
+    body: (
+      <p>
+        Before finalizing the purchase, the restaurant user reviews the
+        generated cart. This human-in-the-loop step preserves buyer control by
+        allowing verification of selected items, quantities, and recommendation
+        quality before order submission.
+      </p>
     ),
   },
   {
     title: "Browse supply & discovery",
-    subtitle: "Find farms that already have what you need.",
+    subtitle: "View available produce manually through the Listings tab.",
     body: (
       <p>
-        Explore supply-side listings to discover seasonal product and build
-        relationships with growers who match your menu and volume.
-      </p>
-    ),
-  },
-  {
-    title: "Checkout & handoff (where enabled)",
-    subtitle: "Structured next steps after you agree.",
-    body: (
-      <p>
-        When your deployment includes checkout or ordering flows, use them to
-        confirm totals and handoff details in line with your team&apos;s
-        process.
-      </p>
-    ),
-  },
-  {
-    title: "Team alignment",
-    subtitle: "Keep procurement decisions traceable.",
-    body: (
-      <p>
-        Centralized threads and listing history help your kitchen or
-        procurement staff see what was agreed and with whom, useful for audits
-        and repeat orders.
+        Restaurant users can also explore active farmer listings directly by
+        navigating to the Listings tab. This supports manual browsing and
+        discovery when the user wants to inspect available supply, explore
+        seasonal inventory, or review grower offerings outside the
+        upload-and-optimization workflow.
       </p>
     ),
   },
