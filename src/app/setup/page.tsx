@@ -101,11 +101,14 @@ export default function GetStartedPage() {
       <section className="rounded-xl border border-[#E0F2EB] bg-[#E0F2EB]/35 p-5 text-sm text-zinc-700">
         <p className="font-semibold text-[#315f34]">Developer setup</p>
         <p className="mt-2 text-xs leading-relaxed">
-          If you need to run Cultivate locally or contribute code, use the{" "}
-          <a href="/wiki" className="font-medium text-[#00674F] underline-offset-2 hover:underline">
-            wiki
+          If you need to run Cultivate locally or contribute code, see the{" "}
+          <a
+            href="/contributing"
+            className="font-medium text-[#00674F] underline-offset-2 hover:underline"
+          >
+            Contribute
           </a>{" "}
-          and repository README instead of this page.
+          page and the repository README instead of this page.
         </p>
       </section>
     </div>

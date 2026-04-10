@@ -131,11 +131,22 @@ export default function WikiGettingStartedPage() {
               messaging instead of fragmented channels.
             </p>
           </WikiFaqItem>
-          <WikiFaqItem question="Is this documentation complete?">
+          <WikiFaqItem question="What is Glean by Cultivate?">
             <p>
-              This wiki is a living artifact for the beta. Sections marked as
-              TODO in the repo should be filled in as your team finalizes copy
-              and behavior.
+              Glean is Cultivate&apos;s built-in assistant, available from the Ask
+              Glean tab in the app. Farmers use it to describe or photograph harvests,
+              get help drafting supply listings, and optionally use features like
+              speech input or dynamic pricing. Restaurants use it to upload or
+              type procurement demand, run sourcing optimization, compare
+              strategies, and review a cart before confirming. For a full
+              feature list by role, open{" "}
+              <Link
+                href="/wiki/features"
+                className="text-[#00674F] hover:underline"
+              >
+                Features
+              </Link>
+              .
             </p>
           </WikiFaqItem>
           <WikiFaqItem question="How do I report a bug or contribute?">
