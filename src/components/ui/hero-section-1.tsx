@@ -7,7 +7,7 @@ import { ArrowRight, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const LIVE_APP_URL = "https://cultivate-fe.vercel.app/";
-const PROMO_VIDEO_URL = "[PROMO_VIDEO_URL]";
+const PROMO_VIDEO_URL = "/cultivate-ad.mp4";
 
 export function HeroSection() {
   return (
@@ -98,39 +98,18 @@ export function HeroSection() {
           <div className="relative mt-8 px-2 sm:mt-12 md:mt-20">
             <div className="relative mx-auto max-w-5xl overflow-hidden rounded-2xl border border-zinc-200 bg-white p-3 shadow-lg">
               <div
-                className="relative flex aspect-video w-full flex-col items-center justify-center gap-3 rounded-xl border border-dashed border-[#E0F2EB] bg-[#E0F2EB]/50 px-6 py-10 text-center sm:py-14"
+                className="relative flex aspect-video w-full flex-col items-center justify-center overflow-hidden rounded-xl border border-[#E0F2EB] bg-[#E0F2EB]/30"
                 role="region"
-                aria-label="Promo video placeholder"
+                aria-label="Cultivate promo video"
               >
-                <div className="flex h-14 w-14 items-center justify-center rounded-full border border-[#00674F]/25 bg-white text-[#00674F] shadow-sm">
-                  <svg
-                    viewBox="0 0 24 24"
-                    className="ml-0.5 h-7 w-7"
-                    fill="currentColor"
-                    aria-hidden
-                  >
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
-                </div>
-                <div className="space-y-1">
-                  <p className="text-sm font-semibold text-zinc-900">
-                    Promo video
-                  </p>
-                  <p className="max-w-md text-xs text-zinc-600">
-                    Drop in an embedded player or link out once your tour is
-                    hosted. Replace{" "}
-                    <code className="rounded bg-white/80 px-1 py-0.5 text-[10px] text-zinc-800">
-                      {PROMO_VIDEO_URL}
-                    </code>{" "}
-                    in the source with your real URL.
-                  </p>
-                </div>
-                <a
-                  href={PROMO_VIDEO_URL}
-                  className="inline-flex items-center justify-center rounded-full bg-[#00674F] px-5 py-2 text-xs font-semibold text-white shadow-sm transition-colors hover:bg-[#00543f] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00A27A]/70"
+                <video
+                  className="h-full w-full object-cover"
+                  controls
+                  playsInline
+                  preload="metadata"
                 >
-                  Watch 2-minute product tour
-                </a>
+                  <source src={PROMO_VIDEO_URL} type="video/mp4" />
+                </video>
               </div>
             </div>
           </div>
