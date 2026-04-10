@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Get started | Cultivate Beta",
@@ -8,10 +9,18 @@ export const metadata: Metadata = {
 
 const LIVE_APP_URL = "https://cultivate-fe.vercel.app/";
 
+type StepImage = {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+};
+
 type OnboardingStep = {
   title: string;
   description: string;
   imageCaption: string;
+  images?: StepImage[];
 };
 
 const onboardingSteps: OnboardingStep[] = [
@@ -19,19 +28,49 @@ const onboardingSteps: OnboardingStep[] = [
     title: "Create your account",
     description:
       "Open Cultivate and sign up through our secure login. You will use the same account each time you return to the app.",
-    imageCaption: "Replace with screenshot: sign-up / login screen",
+    imageCaption: "Sign-up and login screens in the Cultivate app",
+    images: [
+      {
+        src: "/setup/landing.png",
+        alt: "Cultivate home screen with Get started and Log in",
+        width: 1024,
+        height: 610,
+      },
+      {
+        src: "/setup/sign-up.png",
+        alt: "Cultivate welcome screen with email and password fields to sign up",
+        width: 1024,
+        height: 582,
+      },
+    ],
   },
   {
     title: "Choose farmer or restaurant",
     description:
       "Select the role that matches how you will use Cultivate. Farmers list produce and connect with buyers; restaurants and food startups discover local supply and start conversations.",
-    imageCaption: "Replace with screenshot: role selection (farmer vs restaurant)",
+    imageCaption: "Farmer and restaurant role selection in the Cultivate app",
+    images: [
+      {
+        src: "/setup/role-selection.png",
+        alt: "Welcome to Cultivate screen asking how you will use the platform, with Farmer and Restaurant options",
+        width: 1024,
+        height: 581,
+      },
+    ],
   },
   {
     title: "Enter your postal code",
     description:
       "Add a Canadian postal code so listings and matches stay local to your area. You can update this later from your profile if you move.",
-    imageCaption: "Replace with screenshot: postal code entry on profile or onboarding",
+    imageCaption: "Canadian postal code entry during Cultivate onboarding",
+    images: [
+      {
+        src: "/setup/postal-code.png",
+        alt: "Welcome to Cultivate screen asking for Canadian postal code with Back and Create account buttons",
+        width: 1024,
+        height: 582,
+      },
+    ],
   },
 ];
 
@@ -48,6 +87,39 @@ function StepImagePlaceholder({ caption }: { caption: string }) {
       <p className="max-w-sm text-xs text-zinc-600">{caption}</p>
     </div>
   );
+}
+
+function StepVisual({
+  caption,
+  images,
+}: {
+  caption: string;
+  images?: StepImage[];
+}) {
+  if (images?.length) {
+    return (
+      <div className="flex flex-col gap-3">
+        {images.map((img, i) => (
+          <figure
+            key={img.src}
+            className="overflow-hidden rounded-xl border border-zinc-200 bg-zinc-50 shadow-sm"
+          >
+            <Image
+              src={img.src}
+              alt={img.alt}
+              width={img.width}
+              height={img.height}
+              className="h-auto w-full"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              priority={i === 0}
+            />
+          </figure>
+        ))}
+      </div>
+    );
+  }
+
+  return <StepImagePlaceholder caption={caption} />;
 }
 
 export default function GetStartedPage() {
@@ -81,7 +153,7 @@ export default function GetStartedPage() {
             className="grid gap-6 rounded-xl border border-zinc-200 bg-white/90 p-5 shadow-sm lg:grid-cols-[1fr,1.15fr] lg:items-start lg:p-6"
           >
             <div className="flex flex-col gap-3 lg:order-2">
-              <StepImagePlaceholder caption={step.imageCaption} />
+              <StepVisual caption={step.imageCaption} images={step.images} />
             </div>
             <div className="flex gap-3 lg:order-1">
               <span className="mt-0.5 inline-flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-[#E0F2EB] text-sm font-semibold text-[#00674F]">
