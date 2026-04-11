@@ -52,7 +52,7 @@ const steps = [
     title: "Farmer premium: dynamic pricing",
     instruction:
       "With premium enabled, pricing can adjust from live signals—keep offers competitive while you focus on the harvest.",
-    videoUrl: "/dp_new.mov",
+    videoUrl: "/dp_strict.mov",
     imageSrc:
       "/dp_new_example.png",
     imageAlt: "Showing dynamic pricing in action",
