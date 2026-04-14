@@ -16,10 +16,10 @@ const LINKS = {
 } as const;
 
 const btnPrimary =
-  "inline-flex w-[220px] max-w-full shrink-0 items-center justify-center rounded-md bg-[#00674F] px-3 py-2.5 text-xs font-semibold text-white shadow-sm transition-colors hover:bg-[#00543f]";
+  "mx-auto inline-flex w-[220px] max-w-full items-center justify-center rounded-md bg-[#00674F] px-3 py-2.5 text-xs font-semibold text-white shadow-sm transition-colors hover:bg-[#00543f]";
 
 const btnOutline =
-  "inline-flex w-[220px] max-w-full shrink-0 items-center justify-center rounded-md border border-zinc-300 bg-white px-3 py-2 text-xs font-semibold text-zinc-800 shadow-sm hover:border-[#00674F]/50 hover:text-[#00674F]";
+  "mx-auto inline-flex w-[220px] max-w-full items-center justify-center rounded-md border border-zinc-300 bg-white px-3 py-2 text-xs font-semibold text-zinc-800 shadow-sm hover:border-[#00674F]/50 hover:text-[#00674F]";
 
 const docLinkClass =
   "font-medium text-[#00674F] underline decoration-[#00674F]/30 underline-offset-2 hover:text-[#00543f]";
@@ -102,7 +102,7 @@ export default function ContributingPage() {
               Use GitHub issue templates. Include reproduction steps, expected vs.
               actual behavior, and screenshots or logs when available.
             </p>
-            <div className="mt-4 flex flex-col items-start gap-2">
+            <div className="mt-4 flex flex-col items-center gap-2">
               <a href={LINKS.bugReportNew} className={btnPrimary}>
                 Report a bug
               </a>
@@ -123,7 +123,7 @@ export default function ContributingPage() {
               A tester reported a farmer listing bug: the suggested price hint
               did not update correctly when switching unit type (#42).
             </p>
-            <div className="mt-4 flex flex-col items-start gap-2">
+            <div className="mt-4 flex flex-col items-center gap-2">
               <a href={LINKS.exampleIssue} className={btnPrimary}>
                 View filed external issue
               </a>
@@ -145,7 +145,7 @@ export default function ContributingPage() {
               </span>{" "}
               for resolution or formal deferral.
             </p>
-            <div className="mt-4 flex flex-col items-start gap-2">
+            <div className="mt-4 flex flex-col items-center gap-2">
               <a href={LINKS.triageComment} className={btnPrimary}>
                 View team triage response
               </a>
