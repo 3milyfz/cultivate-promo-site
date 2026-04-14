@@ -2,12 +2,15 @@ import Image from "next/image";
 
 export default function WorkflowArchitecturePage() {
   return (
-    <div className="space-y-10">
-      <header className="space-y-3">
-        <h1 className="text-2xl font-semibold tracking-tight text-zinc-900">
+    <div className="max-w-3xl space-y-10">
+      <header className="space-y-4 border-b border-zinc-200 pb-10">
+        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500">
+          How Cultivate works
+        </p>
+        <h1 className="text-3xl font-semibold tracking-tight text-zinc-900">
           Workflow &amp; Architecture
         </h1>
-        <p className="max-w-2xl text-sm text-zinc-700">
+        <p className="text-lg leading-relaxed text-zinc-600">
           Use this page to tell a clear story about how a user moves through the
           Cultivate workflow and how the system behaves behind the scenes.
         </p>

@@ -25,7 +25,7 @@ const docLinkClass =
   "font-medium text-[#00674F] underline decoration-[#00674F]/30 underline-offset-2 hover:text-[#00543f]";
 
 const cardClass =
-  "rounded-lg border border-zinc-200 bg-white/90 p-4 text-sm shadow-sm";
+  "rounded-lg border border-zinc-200 bg-white/90 p-4 shadow-sm";
 
 export default function ContributingPage() {
   return (
@@ -90,15 +90,15 @@ export default function ContributingPage() {
       </SectionWithMockup>
 
       <div>
-        <p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-zinc-500">
+        <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500">
           Get started
         </p>
         <div className="grid gap-4 md:grid-cols-3">
           <div className={cardClass}>
-            <h2 className="text-sm font-semibold text-zinc-900">
+            <h2 className="text-lg font-semibold text-zinc-900">
               Reporting bugs &amp; suggestions
             </h2>
-            <p className="mt-1 text-xs leading-relaxed text-zinc-700">
+            <p className="mt-1 text-sm leading-relaxed text-zinc-600">
               Use GitHub issue templates. Include reproduction steps, expected vs.
               actual behavior, and screenshots or logs when available.
             </p>
@@ -116,10 +116,10 @@ export default function ContributingPage() {
           </div>
 
           <div className={cardClass}>
-            <h2 className="text-sm font-semibold text-zinc-900">
+            <h2 className="text-lg font-semibold text-zinc-900">
               Example external issue
             </h2>
-            <p className="mt-1 text-xs leading-relaxed text-zinc-700">
+            <p className="mt-1 text-sm leading-relaxed text-zinc-600">
               A tester reported a farmer listing bug: the suggested price hint
               did not update correctly when switching unit type (#42).
             </p>
@@ -131,10 +131,10 @@ export default function ContributingPage() {
           </div>
 
           <div className={cardClass}>
-            <h2 className="text-sm font-semibold text-zinc-900">
+            <h2 className="text-lg font-semibold text-zinc-900">
               Team triage &amp; resolution
             </h2>
-            <p className="mt-1 text-xs leading-relaxed text-zinc-700">
+            <p className="mt-1 text-sm leading-relaxed text-zinc-600">
               Beta SLA:{" "}
               <span className="font-medium text-zinc-900">24h</span>{" "}
               acknowledgement,{" "}
