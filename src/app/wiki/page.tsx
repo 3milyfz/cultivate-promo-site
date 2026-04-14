@@ -6,7 +6,7 @@ import {
 
 export default function WikiGettingStartedPage() {
   return (
-    <div className="max-w-3xl space-y-10">
+    <div className="mx-auto w-full max-w-5xl space-y-10">
       <header className="space-y-4 border-b border-zinc-200 pb-10">
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500">
           Documentation
@@ -14,7 +14,7 @@ export default function WikiGettingStartedPage() {
         <h1 className="text-3xl font-semibold tracking-tight text-zinc-900">
           Getting started
         </h1>
-        <p className="text-lg leading-relaxed text-zinc-600">
+        <p className="max-w-3xl text-lg leading-relaxed text-zinc-600">
           Welcome to the Cultivate wiki, structured like a product docs hub, with
           expandable topics and answers so you can skim or go deep.
         </p>

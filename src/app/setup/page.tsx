@@ -124,7 +124,7 @@ function StepVisual({
 
 export default function GetStartedPage() {
   return (
-    <div className="max-w-3xl space-y-10">
+    <div className="mx-auto w-full max-w-6xl space-y-10">
       <header className="space-y-4 border-b border-zinc-200 pb-10">
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500">
           Get started
@@ -132,7 +132,7 @@ export default function GetStartedPage() {
         <h1 className="text-3xl font-semibold tracking-tight text-zinc-900">
           How to use Cultivate
         </h1>
-        <p className="text-lg leading-relaxed text-zinc-600">
+        <p className="max-w-3xl text-lg leading-relaxed text-zinc-600">
           These steps walk you through opening the live beta app, not installing
           the codebase. Complete them once to start listing produce or sourcing
           locally as a buyer.
