@@ -11,8 +11,7 @@ export default function WorkflowArchitecturePage() {
           Architecture
         </h1>
         <p className="max-w-3xl text-lg leading-relaxed text-zinc-600">
-          Use this page to tell a clear story about how a user moves through the
-          Cultivate workflow and how the system behaves behind the scenes.
+          How a user moves through Cultivate workflow and how the system behaves behind the scenes.
         </p>
       </header>
 
