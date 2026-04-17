@@ -52,21 +52,11 @@ export default function WikiGettingStartedPage() {
                 <Link href="/setup" className="text-[#00674F] hover:underline">
                   setup guide
                 </Link>{" "}
-                if you are running the app or API locally.
+                to get started.
               </li>
               <li>
                 Sign in with the credentials your team uses for the beta
-                environment (farm vs restaurant flows may differ).
-              </li>
-              <li>
-                For API or deployment topics, see{" "}
-                <Link
-                  href="/wiki/api-or-deployment"
-                  className="text-[#00674F] hover:underline"
-                >
-                  API / Deployment
-                </Link>
-                .
+                testing (farm vs restaurant flows may differ).
               </li>
             </ul>
           </WikiExpandableCard>
