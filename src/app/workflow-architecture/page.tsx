@@ -16,50 +16,11 @@ export default function WorkflowArchitecturePage() {
         </p>
       </header>
 
-      <section className="space-y-4">
-        <h2 className="text-lg font-semibold text-zinc-900">
-          Primary user workflow
-        </h2>
-        <div className="grid gap-4 lg:grid-cols-[1.7fr,1.3fr] lg:items-start">
-          <div className="rounded-xl border border-dashed border-[#E0F2EB] bg-[#E0F2EB]/40 p-4 text-xs text-zinc-700">
-            WORKFLOW INFOGRAPHIC (CUSTOM DIAGRAM) HERE
-          </div>
-          <div className="space-y-3 text-sm">
-            <p className="text-xs font-semibold text-zinc-600">
-              TODO: Use the fields below to describe each step in the workflow.
-            </p>
-            <ol className="space-y-3 text-xs">
-              {[1, 2, 3, 4].map((step) => (
-                <li
-                  key={step}
-                  className="rounded-md border border-zinc-200 bg-white/90 p-3 shadow-sm"
-                >
-                  <p className="text-[11px] font-semibold text-[#00674F]">
-                    TODO: Step {step} title
-                  </p>
-                  <p className="mt-1 text-zinc-800">
-                    What the user does: TODO: Describe the user action.
-                  </p>
-                  <p className="mt-1 text-zinc-700">
-                    What the system does: TODO: Describe system behavior,
-                    calls, and side-effects.
-                  </p>
-                  <p className="mt-1 text-zinc-600">
-                    Decision points / error states: TODO: Explain any branches,
-                    retries, or failure modes for this step.
-                  </p>
-                </li>
-              ))}
-            </ol>
-          </div>
-        </div>
-      </section>
-
-      <section className="space-y-4">
+      <section className="space-y-6">
         <h2 id="architecture" className="text-lg font-semibold text-zinc-900">
           Architecture diagram
         </h2>
-        <div className="grid gap-4 lg:grid-cols-[1.7fr,1.3fr] lg:items-start">
+        <div className="grid gap-6 lg:grid-cols-[1.7fr,1.3fr] lg:items-start">
           <div className="space-y-3">
             <div className="mx-auto max-w-xl overflow-hidden rounded-xl border border-zinc-200 bg-white shadow-sm md:max-w-2xl">
               <Image
@@ -72,7 +33,7 @@ export default function WorkflowArchitecturePage() {
                 priority
               />
             </div>
-            <p className="text-xs leading-relaxed text-zinc-700">
+            <p className="text-sm leading-relaxed text-zinc-600">
               Beta preserves the alpha system topology: a React frontend calls a
               Hono API server through a typed TypeScript SDK, with Auth0 JWT
               middleware protecting sensitive routes. The backend orchestrates
@@ -80,12 +41,12 @@ export default function WorkflowArchitecturePage() {
               LLM inference, and AAFC Infohort for pricing data.
             </p>
           </div>
-          <div className="space-y-4 text-xs">
-            <div className="rounded-lg border border-zinc-200 bg-white/90 p-3 shadow-sm">
+          <div className="space-y-4">
+            <div className="rounded-xl border border-zinc-200 bg-white/90 p-4 shadow-sm">
               <h3 className="text-sm font-semibold text-zinc-900">
                 Major components
               </h3>
-              <ul className="mt-2 list-disc space-y-2 pl-4 text-zinc-700">
+              <ul className="mt-2 list-disc space-y-2 pl-4 text-sm text-zinc-600">
                 <li>
                   <span className="font-medium text-zinc-900">
                     React frontend:
@@ -138,11 +99,11 @@ export default function WorkflowArchitecturePage() {
                 </li>
               </ul>
             </div>
-            <div className="rounded-lg border border-zinc-200 bg-white/90 p-3 shadow-sm">
+            <div className="rounded-xl border border-zinc-200 bg-white/90 p-4 shadow-sm">
               <h3 className="text-sm font-semibold text-zinc-900">
                 Architecture rationale
               </h3>
-              <p className="mt-1 leading-relaxed text-zinc-700">
+              <p className="mt-1 text-sm leading-relaxed text-zinc-600">
                 The beta topology is materially unchanged from alpha. The main
                 beta update is about hardening of the existing architecture for
                 external use: authenticated sensitive routes, stricter input
@@ -151,11 +112,11 @@ export default function WorkflowArchitecturePage() {
                 other words, beta extends the alpha architecture operationally
                 rather than structurally.
               </p>
-              <div className="mt-3 rounded-md border border-zinc-200 bg-[color:var(--color-earth-50)] p-2">
-                <p className="text-[11px] font-semibold text-zinc-900">
+              <div className="mt-4 rounded-md border border-zinc-200 bg-[color:var(--color-earth-50)] p-3">
+                <p className="text-xs font-semibold text-zinc-900">
                   Changes since alpha
                 </p>
-                <p className="mt-1 text-[11px] text-zinc-700">
+                <p className="mt-1 text-xs leading-relaxed text-zinc-600">
                   No changes since alpha
                 </p>
               </div>
