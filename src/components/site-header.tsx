@@ -37,7 +37,7 @@ export function SiteHeader() {
             Demo
           </a>
           <a href="/workflow-architecture" className="hover:text-zinc-900">
-            Workflow &amp; Architecture
+            Architecture
           </a>
           <a href="/wiki" className="hover:text-zinc-900">
             Wiki
