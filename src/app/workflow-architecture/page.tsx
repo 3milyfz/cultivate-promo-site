@@ -8,7 +8,7 @@ export default function WorkflowArchitecturePage() {
           How Cultivate works
         </p>
         <h1 className="text-3xl font-semibold tracking-tight text-zinc-900">
-          Workflow &amp; Architecture
+          Architecture
         </h1>
         <p className="max-w-3xl text-lg leading-relaxed text-zinc-600">
           Use this page to tell a clear story about how a user moves through the

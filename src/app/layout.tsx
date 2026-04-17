@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { SiteHeader } from "@/components/site-header";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -38,54 +39,6 @@ export default function RootLayout({
         </div>
       </body>
     </html>
-  );
-}
-
-function SiteHeader() {
-  return (
-    <header className="border-b border-zinc-200 bg-white/90 backdrop-blur">
-      <div className="container mx-auto flex items-center justify-between px-4 py-3 lg:px-8">
-        <div className="flex items-center gap-2">
-          <a
-            href="/"
-            aria-label="Cultivate home"
-            className="flex items-center gap-2"
-          >
-            <img
-              src="/cultivate-logo-wordmark.png"
-              alt="Cultivate"
-              className="h-7 w-auto"
-            />
-            <span className="ml-1 rounded-full bg-[#E0F2EB] px-2 py-0.5 text-[11px] font-medium text-[#00674F]">
-              Beta
-            </span>
-          </a>
-        </div>
-        <nav className="hidden items-center gap-6 text-sm text-zinc-600 md:flex">
-          <a href="/" className="hover:text-zinc-900">
-            Overview
-          </a>
-          <a href="/demo" className="hover:text-zinc-900">
-            Demo
-          </a>
-          <a href="/workflow-architecture" className="hover:text-zinc-900">
-            Workflow &amp; Architecture
-          </a>
-          <a href="/wiki" className="hover:text-zinc-900">
-            Wiki
-          </a>
-          <a href="/contributing" className="hover:text-zinc-900">
-            Contribute
-          </a>
-        </nav>
-        <a
-          href="/setup"
-          className="rounded-md bg-[#00674F] px-3 py-1.5 text-xs font-semibold text-white shadow-sm hover:bg-[#00543f]"
-        >
-          Get Started
-        </a>
-      </div>
-    </header>
   );
 }
 
