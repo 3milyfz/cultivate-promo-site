@@ -11,7 +11,7 @@ export default function WorkflowArchitecturePage() {
           Workflow & Architecture
         </h1>
         <p className="max-w-3xl text-lg leading-relaxed text-zinc-600">
-          How a user moves through Cultivate workflow and how the system behaves behind the scenes.
+          How a user moves through our workflow and how the system behaves behind the scenes.
         </p>
       </header>
 
@@ -19,17 +19,31 @@ export default function WorkflowArchitecturePage() {
         <h2 id="workflow" className="text-lg font-semibold text-zinc-900">
           Workflow infographics
         </h2>
-        <div className="grid gap-6 lg:grid-cols-[1.7fr,1.3fr] lg:items-start">
+        <div className="grid gap-6 lg:grid-cols-2 lg:items-start">
           <div className="space-y-3">
-            <div className="mx-auto max-w-xl overflow-hidden rounded-xl border border-zinc-200 bg-white shadow-sm md:max-w-2xl">
+            <p className="text-sm font-semibold text-zinc-900">Farmer workflow</p>
+            <div className="mx-auto w-full max-w-xl overflow-hidden rounded-xl border border-zinc-200 bg-white shadow-sm md:max-w-none">
               <Image
-                src="/farmer_workflow_v1.png"
+                src="/farmer_workflow_v2.png"
                 alt="Farmer workflow: create a listing with Glean, voice input, and dynamic pricing"
                 width={1594}
                 height={832}
                 className="h-auto w-full object-contain object-top"
-                sizes="(max-width: 768px) min(100vw,36rem), min(42rem, 50vw)"
+                sizes="(max-width: 1024px) min(100vw, 36rem), min(50vw, 42rem)"
                 priority
+              />
+            </div>
+          </div>
+          <div className="space-y-3">
+            <p className="text-sm font-semibold text-zinc-900">Restaurant workflow</p>
+            <div className="mx-auto w-full max-w-xl overflow-hidden rounded-xl border border-zinc-200 bg-white shadow-sm md:max-w-none">
+              <Image
+                src="/restaurant_workflow_v1.png"
+                alt="Restaurant workflow: browse listings, place orders, and coordinate fulfillment"
+                width={2700}
+                height={4560}
+                className="h-auto w-full object-contain object-top"
+                sizes="(max-width: 1024px) min(100vw, 36rem), min(50vw, 42rem)"
               />
             </div>
           </div>
