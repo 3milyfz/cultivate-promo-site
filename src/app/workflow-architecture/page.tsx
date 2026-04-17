@@ -8,12 +8,36 @@ export default function WorkflowArchitecturePage() {
           How Cultivate works
         </p>
         <h1 className="text-3xl font-semibold tracking-tight text-zinc-900">
-          Architecture
+          Workflow & Architecture
         </h1>
         <p className="max-w-3xl text-lg leading-relaxed text-zinc-600">
           How a user moves through Cultivate workflow and how the system behaves behind the scenes.
         </p>
       </header>
+
+      <section className="space-y-6">
+        <h2 id="workflow" className="text-lg font-semibold text-zinc-900">
+          Workflow diagram
+        </h2>
+        <div className="grid gap-6 lg:grid-cols-[1.7fr,1.3fr] lg:items-start">
+          <div className="space-y-3">
+            <div className="mx-auto max-w-xl overflow-hidden rounded-xl border border-zinc-200 bg-white shadow-sm md:max-w-2xl">
+              <Image
+                src="/farmer_workflow_v1.png"
+                alt="Farmer workflow: create a listing with Glean, voice input, and dynamic pricing"
+                width={1594}
+                height={832}
+                className="h-auto w-full object-contain object-top"
+                sizes="(max-width: 768px) min(100vw,36rem), min(42rem, 50vw)"
+                priority
+              />
+            </div>
+            <p className="text-sm leading-relaxed text-zinc-600">
+              The farmer workflow is designed to be simple and intuitive.
+            </p>
+          </div>
+        </div>
+      </section>
 
       <section className="space-y-6">
         <h2 id="architecture" className="text-lg font-semibold text-zinc-900">
