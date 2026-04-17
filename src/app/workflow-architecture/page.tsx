@@ -32,9 +32,6 @@ export default function WorkflowArchitecturePage() {
                 priority
               />
             </div>
-            <p className="text-sm leading-relaxed text-zinc-600">
-              The farmer workflow is designed to be simple and intuitive.
-            </p>
           </div>
         </div>
       </section>
