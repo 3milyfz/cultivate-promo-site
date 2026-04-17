@@ -17,7 +17,7 @@ export default function WorkflowArchitecturePage() {
 
       <section className="space-y-6">
         <h2 id="workflow" className="text-lg font-semibold text-zinc-900">
-          Workflow diagram
+          Workflow infographics
         </h2>
         <div className="grid gap-6 lg:grid-cols-[1.7fr,1.3fr] lg:items-start">
           <div className="space-y-3">
