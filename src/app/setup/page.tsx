@@ -180,7 +180,15 @@ export default function GetStartedPage() {
           >
             Contribute
           </a>{" "}
-          page and the repository README instead of this page.
+          page and the repository{" "}
+          <a
+            href="https://github.com/csc454-team-main-catzo/cultivate/blob/main/README.md"
+            rel="noopener noreferrer"
+            className="font-medium text-[#00674F] underline-offset-2 hover:underline"
+          >
+            README
+          </a>{" "}
+          instead of this page.
         </p>
       </section>
     </div>

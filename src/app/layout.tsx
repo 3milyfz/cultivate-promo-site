@@ -29,7 +29,10 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} relative h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-[color:var(--color-earth-50)] text-zinc-900">
+      <body
+        className="min-h-full flex flex-col bg-[color:var(--color-earth-50)] text-zinc-900"
+        suppressHydrationWarning
+      >
         <div className="flex min-h-screen flex-col">
           <SiteHeader />
           <main className="container mx-auto flex-1 px-4 py-8 lg:px-8">
